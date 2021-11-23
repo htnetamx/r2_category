@@ -40,7 +40,8 @@ const setMySQL2 = {
 export const AppConnections = new DataBaseConnections();
 
 async function appStart(): Promise<string> {
-  const app = new App(3000);
+  const port = process.env.PORT || 3000;
+  const app = new App(+port);
   const AppConnections = new DataBaseConnections();
   AppConnections.addConnection(
     ConnectionType.Mongoose,
