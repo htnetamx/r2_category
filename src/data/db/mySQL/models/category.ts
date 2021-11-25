@@ -1,8 +1,10 @@
 import { CategoryBaseModel } from "data/entities";
 export interface CategoryMySQL {
   Name: String;
-  PictureId: String;
+  SeoFilename: String;
+  MimeType: String;
   Id: String;
+  PictureId: String;
   CreatedOnUtc: Date;
   UpdatedOnUtc: Date;
 }

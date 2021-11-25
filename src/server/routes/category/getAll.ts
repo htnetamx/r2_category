@@ -12,7 +12,7 @@ export class getAllRoute {
     try {
       const result = await new CategoryController().getAll();
       res.status(200).send(result);
-    } catch (e) { }
+    } catch (e) {}
   };
 
   public configureEndPoints(baseUrl: string) {
@@ -29,7 +29,7 @@ export class getAllRoute {
      *        Name:
      *          type: string
      *          description: Category name.
-     *        PictureId:
+     *        SeoFilename:
      *          type: string
      *          description: The identifier of the picture.
      *        CreatedOnUtc:
@@ -41,7 +41,7 @@ export class getAllRoute {
      *      example:
      *        Id: 2
      *        Name: Cuidado Personal
-     *        PictureId: 0
+     *        SeoFilename: 0
      *        CreatedOnUtc: 2021-07-22T23:05:41.000Z
      *        UpdatedOnUtc: 2021-07-22T23:05:17.000Z
      */

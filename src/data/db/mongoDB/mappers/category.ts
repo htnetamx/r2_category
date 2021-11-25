@@ -8,11 +8,12 @@ export class CategoryMapperMongoDB extends Mapper<
 > {
   mapFrom(param: CategoryMongoDB): CategoryBaseModel {
     return {
-      Id: "",
-      Name: "",
-      PictureId: "",
-      CreatedOnUtc: new Date(),
-      UpdatedOnUtc: new Date(),
+      id: "",
+      name: "",
+      seoFilename: "",
+      mimeType: "",
+      createdOnUtc: new Date(),
+      updatedOnUtc: new Date(),
     };
   }
   mapTo(param: CategoryBaseModel): CategoryMongoDB {

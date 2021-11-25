@@ -1,26 +1,29 @@
 import { CategoryInputModel } from "../../application/domain";
 
 export interface CategoryBaseModel {
-  Id: string;
-  Name: string;
-  PictureId: string;
-  CreatedOnUtc: Date;
-  UpdatedOnUtc: Date;
+  id: string;
+  name: string;
+  seoFilename: string;
+  mimeType: string;
+  createdOnUtc: Date;
+  updatedOnUtc: Date;
 }
 
 export class Category implements CategoryBaseModel {
-  public Id: string;
-  public Name: string;
-  public PictureId: string;
+  public id: string;
+  public name: string;
+  public seoFilename: string;
+  public mimeType: string;
 
-  public CreatedOnUtc: Date;
-  public UpdatedOnUtc: Date;
+  public createdOnUtc: Date;
+  public updatedOnUtc: Date;
 
   constructor(data: CategoryInputModel) {
-    this.Id = data.Id;
-    this.Name = data.Name;
-    this.PictureId = data.PictureId;
-    this.CreatedOnUtc = data.CreatedOnUtc;
-    this.UpdatedOnUtc = data.UpdatedOnUtc;
+    this.id = data.Id;
+    this.name = data.Name;
+    this.seoFilename = data.SeoFilename;
+    this.mimeType = data.MimeType;
+    this.createdOnUtc = data.CreatedOnUtc;
+    this.updatedOnUtc = data.UpdatedOnUtc;
   }
 }

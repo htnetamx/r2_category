@@ -11,13 +11,13 @@ import {
   IGroupedService,
 } from "../../base";
 
-export interface IProductService {
+export interface ICategoryService {
   mongoDB: ICategoryRepository;
   mySQL: ICategoryRepository;
 }
 
-export class ProductService {
-  public repos: IProductService = {
+export class CategoryService {
+  public repos: ICategoryService = {
     mongoDB: new RepositoryMongoDB(),
     mySQL: new RepositoryMySQL(),
   };
@@ -25,6 +25,7 @@ export class ProductService {
   //Conjunto de servicios bases de datos
   async getAll(): Promise<Array<CategoryBaseModel | null> | null> {
     try {
+      console.log("getAll");
       var promises: Array<Promise<Array<CategoryBaseModel | null> | null>> = [];
       const entries = Object.entries(this.repos);
 
@@ -53,7 +54,7 @@ export class ProductService {
         return null;
       }
     } catch (error) {
-      //console.log(error);
+      console.log(error);
       return null;
     }
   }
