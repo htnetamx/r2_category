@@ -1,2 +1,9 @@
 node_modules/
 .env
+.github/
+npm-debug.log
+.git
+.cache
+*.md
+!README*.md
+README-secret.md
