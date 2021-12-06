@@ -53,8 +53,8 @@ jobs:
       run: ./.github/scripts/decrypt_secret.sh
       env:
         LARGE_SECRET_PASSPHRASE: ${{ secrets.ECS_TASK_DEFINITION }}
-    - name: Test printing your secret (Remove this step in production)
-      run: cat $HOME/secrets/task-definition.json
+    # - name: Test printing your secret (Remove this step in production)
+    #   run: cat $HOME/secrets/task-definition.json
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -80,6 +80,9 @@ jobs:
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+    
+    - name: Test printing your secret (Remove this step in production)
+      run: cat $HOME/secrets/task-definition.json
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
