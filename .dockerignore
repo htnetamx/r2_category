@@ -7,3 +7,4 @@ npm-debug.log
 *.md
 !README*.md
 README-secret.md
+task-definition.json
