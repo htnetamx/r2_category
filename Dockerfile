@@ -26,4 +26,4 @@ COPY --chown=node:node . .
 
 RUN npm run build
 
-CMD ["node", "./build/src/index.js"]
+CMD ["node", "./build/index.js"]
