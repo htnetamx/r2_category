@@ -6,7 +6,7 @@ Microservicio web que permite descargar de las diferentes categorias de Neta.
 
 El flujo es:
  - La aplicacion frontend realiza una peticion al endpoint ../category/ para obtener todas las categorias existentes.
- - La aplicacion frontend realiza una peticion al endpoint ../category/:id para obtener la informacion de una catgoria en especifico.
+ - La aplicacion frontend realiza una peticion al endpoint ../category/:id para obtener la informacion de una categoria en especifico.
 
 
 
