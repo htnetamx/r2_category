@@ -31,7 +31,7 @@ Instalar los requerimientos
 
     npm run dev
 
-Verificar en la consola que la aplicacion se ejecuto correctamente, abrir un navegador y verificar en el http://localhost:3001
+Verificar en la consola que la aplicacion se ejecuto correctamente, abrir un navegador y verificar en el http://localhost:3000
 
 Compilacion de imagen Docker
 
@@ -39,7 +39,7 @@ Compilacion de imagen Docker
 
 Ejecuccion de imagen Docker pasandole el archivo .env 
 
-     docker run --env-file .env -p 3001:3001 r2_category
+     docker run --env-file .env -p 3000:3000 r2_category
 
 Deploy
 ------

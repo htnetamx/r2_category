@@ -7,8 +7,7 @@ import { DataBaseConnections } from "./connections";
 
 import * as dotenv from "dotenv";
 
-dotenv.config()
-
+dotenv.config();
 
 const setMongoose = {
   input: {
@@ -40,7 +39,7 @@ const setMySQL2 = {
 export const AppConnections = new DataBaseConnections();
 
 async function appStart(): Promise<string> {
-  const port = process.env.PORT || 3001;
+  const port = process.env.PORT || 3000;
   const app = new App(+port);
   const AppConnections = new DataBaseConnections();
   AppConnections.addConnection(
