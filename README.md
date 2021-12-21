@@ -2,42 +2,41 @@
 
 Microservicio de Categoría
 ==========================
+
 Microservicio web que permite descargar de las diferentes categorias de Neta.
 
 El flujo es:
- - La aplicacion frontend realiza una peticion al endpoint ../category/ para obtener todas las categorias existentes.
- - La aplicacion frontend realiza una peticion al endpoint ../category/:id para obtener la informacion de una categoria en especifico.
 
-
+- La aplicacion frontend realiza una peticion al endpoint ../category/ para obtener todas las categorias existentes.
+- La aplicacion frontend realiza una peticion al endpoint ../category/:id para obtener la informacion de una categoria en especifico.
 
 Instalando ambiente para desarrollo
 --------------------------
 
 Instalar los requerimientos
 
-
-
     npm install
 
 Crear un archivo '.env' con las credenciales necesarias.
-
 
     DATABASE_MYSQL_USER=
     DATABASE_MYSQL_PASSWORD=
     DATABASE_MYSQL_HOST=
     DATABASE_MYSQL_NAME=
 
-Instalar los requerimientos
+Iniciar la app
 
     npm run dev
 
 Verificar en la consola que la aplicacion se ejecuto correctamente, abrir un navegador y verificar en el http://localhost:3000
 
+La documentación del microservicio se encuentra en http://localhost:3000/docs
+
 Compilacion de imagen Docker
 
     docker build -t r2_category:latest .
 
-Ejecuccion de imagen Docker pasandole el archivo .env 
+Ejecuccion de imagen Docker pasandole el archivo .env
 
      docker run --env-file .env -p 3000:3000 r2_category
 
